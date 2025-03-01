@@ -1,0 +1,41 @@
+.container {
+  background-color: hsl(240, 41%, 23%);
+}
+.thumbnail_container {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  width: fit-content;
+}
+.thumbnail_link {
+  flex: auto;
+  margin: 20px;
+  min-width: 200px;
+  height: 200px;
+  transition: all 0.2s ease-in;
+}
+.thumbnail_link:hover {
+  flex-grow: 12;
+}
+
+.header_text {
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 2;
+  font-weight: 900;
+  font-size: 50px;
+  position: static;
+  position: fixed;
+  padding: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  color: white;
+  width: 100%;
+  background-color: hsl(240, 41%, 23%);
+}
+@media screen and (max-width: 400px) {
+  .header_text {
+    font-size: 35px;
+    text-align: center;
+  }
+}

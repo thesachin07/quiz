@@ -1,0 +1,139 @@
+.quiz_card {
+  background-color: white;
+  width: min(80vw, 500px);
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  border-radius: 20px;
+}
+.quiz_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(240, 41%, 23%);
+}
+.quiz_question {
+  padding: 20px;
+  flex-direction: row;
+  width: min(80vw, 600px);
+}
+.options_div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.option_button {
+  transition: all 0.2s;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 100%;
+  padding: 5px;
+  margin: 5px 10px;
+  font-size: 20px;
+  font-family: "Titillium Web", sans-serif;
+}
+.header_text {
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 2;
+  font-weight: 900;
+  font-size: 50px;
+
+  padding: 10px;
+
+  position: absolute;
+  top: -1px;
+  color: white;
+  width: 100%;
+  background-color: hsl(240, 41%, 23%);
+}
+
+.text_div {
+  font-family: "Titillium Web", sans-serif;
+  flex: 1;
+  font-size: 30px;
+}
+@media screen and (max-width: 400px) {
+  .text_div {
+    font-size: 20px;
+  }
+  .option_button {
+    font-size: 20px;
+  }
+  .quiz_question {
+    display: flex;
+    flex-direction: column;
+  }
+  .options_div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+    width: 100%;
+    margin: 0px;
+  }
+  .option_button {
+    margin: 0;
+    width: 100%;
+  }
+  .option_button:active {
+    background-color: hsl(240, 41%, 23%);
+    color: white;
+  }
+}
+@media (hover: hover) {
+  .option_button:hover {
+    background-color: hsl(240, 41%, 23%);
+    color: white;
+  }
+}
+.correct {
+  background-color: rgb(77, 207, 7);
+}
+.correct:hover {
+  background-color: rgb(77, 207, 77);
+}
+.incorrect {
+  background-color: rgb(245, 73, 67);
+}
+.incorrect:hover {
+  background-color: rgb(245, 73, 67);
+}
+.next_button {
+  position: absolute;
+  height: 45px;
+  width: 60%;
+  left: 20%;
+  bottom: -50px;
+  border-width: 2px;
+  border: solid white;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  transition: all 0.5s;
+  transform: (0, -100%);
+  border-radius: 10px;
+}
+.next_button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+.buttons_div {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media screen and (max-width: 490px) {
+  .header_text {
+    font-size: 30px;
+    text-align: center;
+  }
+}
